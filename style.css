@@ -821,3 +821,31 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--k
 .node-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
 .node-pair .paper-figure{margin:0}
 @media(max-width:760px){.dv-rounds{grid-template-columns:1fr}.dv-judge{grid-template-columns:1fr;gap:4px}.node-pair{grid-template-columns:1fr}.debate-viz{padding:18px 14px}}
+/* 문제 → 지식 그래프 근거 매핑 */
+.ps-map{display:grid;gap:12px;margin:22px 0 8px}
+.ps-row{display:grid;grid-template-columns:1fr 44px 1fr;align-items:stretch}
+.ps-prob,.ps-sol,.pv-in,.pv-agent,.pv-out{border-radius:14px;padding:18px 20px}
+.ps-prob{background:#f2f4f6}
+.ps-sol{background:#fff;border:1.5px solid var(--ink)}
+.ps-prob span,.ps-sol span,.pv-in span,.pv-agent>span,.pv-out span{display:block;font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:4px}
+.ps-sol span{color:var(--key)}
+.ps-prob b,.ps-sol b,.pv-in b,.pv-agent>b,.pv-out b{display:block;font-size:17px;font-weight:800;color:var(--ink);line-height:1.4}
+.ps-prob p,.ps-sol p{font-size:14.5px!important;line-height:1.65!important;color:var(--sub);margin:6px 0 0!important}
+.ps-arrow{align-self:center;justify-self:center;width:24px;height:2px;background:#b0b8c1;position:relative}
+.ps-arrow::after{content:"";position:absolute;right:-2px;top:-4px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid #b0b8c1}
+/* 파싱 에이전트 구조 */
+.parse-viz{display:grid;grid-template-columns:.8fr 44px 2.2fr 44px .6fr;align-items:stretch;margin:22px 0 28px}
+.pv-in{background:#f2f4f6}.pv-in b{font-size:15px!important}
+.pv-agent{background:#fff;border:1.5px solid var(--ink)}
+.pv-agent>b{font-size:15px!important;font-weight:700!important;color:var(--sub)!important;margin-bottom:12px}
+.pv-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pv-tool{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;font-weight:700;color:var(--sub);background:#fafbfc}
+.pv-tool small{display:block;font-size:12px;font-weight:700;color:var(--key);margin-top:2px}
+.pv-mine{border:1.5px solid var(--key);background:#fff;color:var(--ink)}
+.pv-out{background:#f2f4f6;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:760px){
+ .ps-row,.parse-viz{grid-template-columns:1fr}
+ .ps-arrow{width:2px;height:22px;margin:4px 0}
+ .ps-arrow::after{right:auto;left:-4px;top:auto;bottom:-2px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #b0b8c1;border-bottom:0}
+ .pv-tools{grid-template-columns:1fr 1fr}
+}
