@@ -801,3 +801,23 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--k
 .portrait{width:150px!important;aspect-ratio:3/4!important;height:auto;border-radius:18px!important;object-fit:cover}
 @media(max-width:760px){.portrait{width:112px!important;border-radius:14px!important}}
 @media(min-width:761px){.identity{grid-template-columns:168px 1fr!important;align-items:center}.portrait{width:168px!important}}
+/* 노고신 토론 과정 */
+.debate-viz{margin:36px 0 8px;padding:24px;border:1px solid var(--line);border-radius:18px;background:#fafbfc}
+.dv-q{font-size:13px;font-weight:700;color:var(--muted);margin:0 0 6px!important}
+.dv-lead{font-size:15px!important;color:var(--sub);margin:0 0 18px!important;line-height:1.7!important}
+.dv-rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dv-round{display:flex;flex-direction:column;gap:8px}
+.dv-r{margin:0 0 2px!important;font-size:14px!important;color:var(--sub)}
+.dv-r b{color:var(--ink);font-weight:800;margin-right:8px}
+.dv-say{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.dv-say span{display:block;font-size:12px;font-weight:800;margin-bottom:4px}
+.dv-bull span{color:var(--key)}.dv-bear span{color:var(--ink)}
+.dv-bull{border-left:3px solid var(--key)}.dv-bear{border-left:3px solid var(--ink)}
+.dv-say p{font-size:13.5px!important;line-height:1.65!important;color:var(--sub);margin:0!important}
+.dv-judge{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;margin-top:14px;padding:14px 18px;border-radius:12px;background:#fff;border:1.5px solid var(--ink)}
+.dv-judge span{font-size:13px;font-weight:800;color:var(--ink)}
+.dv-judge p{margin:0!important;font-size:14px!important;color:var(--sub)}
+.dv-judge b{font-size:16px;font-weight:800;color:var(--key);white-space:nowrap}
+.node-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.node-pair .paper-figure{margin:0}
+@media(max-width:760px){.dv-rounds{grid-template-columns:1fr}.dv-judge{grid-template-columns:1fr;gap:4px}.node-pair{grid-template-columns:1fr}.debate-viz{padding:18px 14px}}
